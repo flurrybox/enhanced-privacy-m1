@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!--
+/**
+* This file is part of the Flurrybox EnhancedPrivacy package.
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade Flurrybox EnhancedPrivacy
+* to newer versions in the future.
+*
+* @copyright Copyright (c) 2018 Flurrybox, Ltd. (https://flurrybox.com/)
+* @license   GNU General Public License ("GPL") v3.0
+*
+* For the full copyright and license information, please view the LICENSE
+* file that was distributed with this source code.
+*/
+-->
+<config>
+    <modules>
+        <Flurrybox_EnhancedPrivacy>
+            <version>0.0.3</version>
+        </Flurrybox_EnhancedPrivacy>
+    </modules>
+    <frontend>
+        <layout>
+            <updates>
+                <flurrybox_enhancedprivacy module="Flurrybox_EnhancedPrivacy">
+                    <file>flurrybox/enhanced_privacy.xml</file>
+                </flurrybox_enhancedprivacy>
+            </updates>
+        </layout>
+        <routers>
+            <enhancedprivacy>
+                <use>standard</use>
+                <args>
+                    <module>Flurrybox_EnhancedPrivacy</module>
+                    <frontName>privacy</frontName>
+                </args>
+            </enhancedprivacy>
+        </routers>
+    </frontend>
+    <global>
+        <models>
+            <flurrybox_enhancedprivacy>
+                <class>Flurrybox_EnhancedPrivacy_Model</class>
+                <resourceModel>flurrybox_enhancedprivacy_resource</resourceModel>
+            </flurrybox_enhancedprivacy>
+            <flurrybox_enhancedprivacy_resource>
+                <class>Flurrybox_EnhancedPrivacy_Model_Resource</class>
+                <entities>
+                    <cleanup>
+                        <table>flurrybox_enhancedprivacy_cleanup_schedule</table>
+                    </cleanup>
+                    <reason>
+                        <table>flurrybox_enhancedprivacy_delete_reason</table>
+                    </reason>
+                </entities>
+            </flurrybox_enhancedprivacy_resource>
+        </models>
+        <resources>
+            <flurrybox_enhancedprivacy_setup>
+                <setup>
+                    <module>Flurrybox_EnhancedPrivacy</module>
+                </setup>
+            </flurrybox_enhancedprivacy_setup>
+        </resources>
+        <blocks>
+            <flurrybox_enhancedprivacy>
+                <class>Flurrybox_EnhancedPrivacy_Block</class>
+            </flurrybox_enhancedprivacy>
+        </blocks>
+        <helpers>
+            <flurrybox_enhancedprivacy>
+                <class>Flurrybox_EnhancedPrivacy_Helper</class>
+            </flurrybox_enhancedprivacy>
+        </helpers>
+    </global>
+    <crontab>
+        <jobs>
+            <enhanced_privacy>
+                <schedule>
+                    <cron_expr>* * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>flurrybox_enhancedprivacy/cron::cleanup</model>
+                </run>
+            </enhanced_privacy>
+        </jobs>
+    </crontab>
+    <default>
+        <customer>
+            <enhancedprivacy>
+                <general_information>This website may store and process Personally Identifiable Information (PII). As per the General Data Protection Regulation (GDPR) you have access to receive the data we store about you and you can request your data to be removed. Please read our Terms &amp; Conditions and Privacy Policy to learn more.</general_information>
+                <delete_time>60</delete_time>
+                <delete_title>Account delete</delete_title>
+                <delete_button_text>Delete my account</delete_button_text>
+                <delete_success>You have requested your account to be deleted. It will be automatically deleted within 1 hour.</delete_success>
+                <delete_information>Be careful and think twice before deleting your account. This action is irreversible.</delete_information>
+                <delete_reason>Please write why you want to delete the account.</delete_reason>
+                <anon_message>As either store owner has enforced account anonymization, or you have made an order it is not possible for you to delete the account. To withdraw your consent in terms of PII storage and processing, you can anonymize this account. After anonymization, you will not be able to log in and the PII will be removed.</anon_message>
+                <export_information>You can export the data we have about you using the button below.</export_information>
+                <popup_text>Our website uses cookies. By using our website, you consent to our use of cookies in accordance with our Cookies Policy.</popup_text>
+            </enhancedprivacy>
+        </customer>
+    </default>
+</config>

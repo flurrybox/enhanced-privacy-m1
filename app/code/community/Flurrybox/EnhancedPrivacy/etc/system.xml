@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<!--
+/**
+* This file is part of the Flurrybox EnhancedPrivacy package.
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade Flurrybox EnhancedPrivacy
+* to newer versions in the future.
+*
+* @copyright Copyright (c) 2018 Flurrybox, Ltd. (https://flurrybox.com/)
+* @license   GNU General Public License ("GPL") v3.0
+*
+* For the full copyright and license information, please view the LICENSE
+* file that was distributed with this source code.
+*/
+-->
+<config>
+    <sections>
+        <customer>
+            <groups>
+                <enhancedprivacy translate="label">
+                    <label>Privacy (GDPR)</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>130</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <heading_general translate="label">
+                            <label>General</label>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                        </heading_general>
+                        <general_enable translate="label">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </general_enable>
+                        <information_page translate="label">
+                            <label>Information page</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_cms_page</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>This page should store information about privacy and GDPR policy.</comment>
+                            <depends>
+                                <general_enable>1</general_enable>
+                            </depends>
+                        </information_page>
+                        <general_information translate="label">
+                            <label>Brief Information</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Brief information about your private policy. This text will be displayed in the settings of the user account.</comment>
+                            <depends>
+                                <general_enable>1</general_enable>
+                            </depends>
+                        </general_information>
+
+                        <heading_delete translate="label">
+                            <label>Account Delete And Anonymize</label>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                            <depends>
+                                <general_enable>1</general_enable>
+                            </depends>
+                        </heading_delete>
+                        <delete_enable translate="label">
+                            <label>Allow Account Delete</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <general_enable>1</general_enable>
+                            </depends>
+                        </delete_enable>
+                        <delete_schema translate="label">
+                            <label>Account Delete Type</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>flurrybox_enhancedprivacy/config_source_schema</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <delete_enable>1</delete_enable>
+                            </depends>
+                        </delete_schema>
+                        <delete_time translate="label">
+                            <label>Account Delete Time (minutes)</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Time in which to process delete and anonymization (minimum is 1 minute)</comment>
+                            <depends>
+                                <delete_enable>1</delete_enable>
+                            </depends>
+                        </delete_time>
+                        <delete_title translate="label">
+                            <label>Account Delete Time (minutes)</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Time in which to process delete and anonymization (minimum is 1 minute)</comment>
+                            <depends>
+                                <delete_enable>1</delete_enable>
+                            </depends>
+                        </delete_title>
+                        <delete_button_text translate="label">
+                            <label>Delete button text</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <delete_enable>1</delete_enable>
+                            </depends>
+                        </delete_button_text>
+                        <delete_success translate="label">
+                            <label>Success message</label>
+                            <comment>This message will be shown when a customer deletes their account.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <delete_enable>1</delete_enable>
+                            </depends>
+                        </delete_success>
+                        <delete_information translate="label">
+                            <label>Delete information</label>
+                            <comment>Information about account deletion. This text will be displayed in the settings of the user account.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <delete_enable>1</delete_enable>
+                            </depends>
+                        </delete_information>
+                        <delete_reason translate="label">
+                            <label>Delete reason description</label>
+                            <comment>Description for delete reason field. This text will be displayed in the deleting page under reason field.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <delete_enable>1</delete_enable>
+                            </depends>
+                        </delete_reason>
+                        <anon_enable translate="label">
+                            <label>Enable anonymization message</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>This message will be show in the settings of the user account, only if the user  made at least one order.</comment>
+                            <depends>
+                                <delete_enable>1</delete_enable>
+                            </depends>
+                        </anon_enable>
+                        <anon_message translate="label">
+                            <label>Anonymization message</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>140</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <delete_enable>1</delete_enable>
+                                <anon_enable>1</anon_enable>
+                            </depends>
+                        </anon_message>
+                        <heading_export translate="label">
+                            <label>Customer Data Export</label>
+                            <sort_order>150</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                            <depends>
+                                <general_enable>1</general_enable>
+                            </depends>
+                        </heading_export>
+                        <export_enable translate="label">
+                            <label>Allow user export</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>160</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <general_enable>1</general_enable>
+                            </depends>
+                        </export_enable>
+                        <export_information translate="label">
+                            <label>Export information</label>
+                            <sort_order>170</sort_order>
+                            <frontend_type>text</frontend_type>
+                            <comment>Information about data export. This text will be displayed in the settings of the user account.</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <export_enable>1</export_enable>
+                            </depends>
+                        </export_information>
+                        <heading_popup translate="label">
+                            <label>Cookie Policy Popup</label>
+                            <sort_order>180</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                            <depends>
+                                <general_enable>1</general_enable>
+                            </depends>
+                        </heading_popup>
+                        <popup_enable translate="label">
+                            <label>Enable popup notification</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>190</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <general_enable>1</general_enable>
+                            </depends>
+                        </popup_enable>
+                        <popup_text translate="label">
+                            <label>Popup notification text</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>200</sort_order>
+                            <comment>Information about data export. This text will be displayed in the setting of the user account.</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <popup_enable>1</popup_enable>
+                            </depends>
+                        </popup_text>
+                    </fields>
+                </enhancedprivacy>
+            </groups>
+        </customer>
+    </sections>
+</config>

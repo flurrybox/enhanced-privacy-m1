@@ -1,0 +1,78 @@
+<!--
+/**
+* This file is part of the Flurrybox EnhancedPrivacy package.
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade Flurrybox EnhancedPrivacy
+* to newer versions in the future.
+*
+* @copyright Copyright (c) 2018 Flurrybox, Ltd. (https://flurrybox.com/)
+* @license   GNU General Public License ("GPL") v3.0
+*
+* For the full copyright and license information, please view the LICENSE
+* file that was distributed with this source code.
+*/
+-->
+<h2><?php echo $this->__('Privacy Settings'); ?></h2>
+<div class="block block-dashboard-info">
+    <div class="block-title"><strong><?php echo $this->__('Information'); ?></strong></div>
+    <div class="block-content">
+        <p><?php echo $this->helper->getGeneralInformation() ?></p>
+    </div>
+</div>
+
+<?php if($this->helper->isExportEnabled()) : ?>
+<form action="<?php echo $this->getExportUrl() ?>" method="post" id="form-validate">
+<div class="block block-dashboard-info">
+        <div class="block-title">
+            <strong><?php echo $this->__('Export your personal data'); ?></strong>
+        </div>
+        <div class="block-content">
+            <p><?php echo $this->helper->getExportInformation(); ?></p>
+            <div class="actions-toolbar">
+                <div class="primary" id="export">
+                    <button type="submit" class="button" id="export">
+                        <span><?php echo $this->__('Export my data'); ?></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<?php endif; ?>
+
+<?php if ($this->helper->isDeleteEnabled()) : ?>
+<form action="<?php echo $this->getDeleteUrl() ?>" method="post" id="form-validate">
+<div class="block block-dashboard-info">
+        <div class="block-title">
+            <strong><?php echo "Account deletion"; ?></strong>
+        </div>
+        <div class="block-content">
+            <?php if($this->isAccountToBeDeleted()): ?>
+                <h2><?php echo $this->__('Attention!'); ?></h2>
+                <p><?php echo $this->__('Your account will be deleted soon. You can undo this action.'); ?></p>
+                <div class="actions-toolbar">
+                    <div class="primary" id="undo_deletion">
+                        <button type="submit" class="button" id="undo_deletion">
+                            <span><?php echo $this->__('Undo deletion'); ?></span>
+                        </button>
+                    </div>
+                </div>
+            <?php else: ?>
+                <p><?php echo $this->helper->getDeleteInformation(); ?></p>
+                <?php if($this->shouldAnonymize()): ?>
+                    <p><?php echo $this->helper->getAnonymizationMessage(); ?></p>
+                <?php endif; ?>
+                <div class="actions-toolbar">
+                    <div class="primary" id="delete">
+                        <button type="submit" class="button" id="delete">
+                            <span><?php echo $this->__('Delete my account'); ?></span>
+                        </button>
+                    </div>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</form>
+<?php endif; ?>
