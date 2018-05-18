@@ -24,11 +24,11 @@
     <frontend>
         <translate>
             <modules>
-                <falconmedia_privacygdpr>
+                <flurrybox_enhancedprivacy>
                     <files>
                         <default>Flurrybox_EnhancedPrivacy.csv</default>
                     </files>
-                </falconmedia_privacygdpr>
+                </flurrybox_enhancedprivacy>
             </modules>
         </translate>
         <layout>
