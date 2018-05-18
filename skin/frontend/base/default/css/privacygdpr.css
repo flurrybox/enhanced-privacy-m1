@@ -1,0 +1,54 @@
+
+div#enhanced-privacy-popup {
+    /*position: fixed;*/
+    bottom: 0;
+    z-index: 9999;
+    background: #f6f6f6;
+    padding: 15px;
+    min-height: auto;
+}
+#delete_account_form button.button span,
+#enhanced-privacy-popup button.button span,
+.block-dashboard-info button.button span {
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-top: 5px;
+    background: red;
+}
+#enhanced-privacy-popup button.button span {
+    background: #79c142;
+    padding: 0px 15px;
+}
+.enhancedprivacy-account-index .block.block-dashboard-info {
+    padding: 25px;
+    border: 1px solid #ccc;
+    margin-top: 15px;
+}
+#delete_account_form .field.password.current.required,
+#delete_account_form .field.field.reason.required {
+    margin: 10px 0;
+}
+#delete_account_form label.label,
+#delete_account_form .control {
+    display: inline-block;
+}
+#delete_account_form label.label {
+    width: 35%;
+}
+#delete_account_form .control {
+    width:60%
+}
+#delete_account_form input#password {
+    padding: 10px;
+    width: calc(100% - 20px);
+}
+#delete_account_form textarea#reason {
+    padding: 5px 10px;
+    width: calc(100% - 20px);
+    height: 100px;
+}
+#delete_account_form .comment {
+    font-style: italic;
+    font-size: 13px;
+    padding: 15px 0;
+}
