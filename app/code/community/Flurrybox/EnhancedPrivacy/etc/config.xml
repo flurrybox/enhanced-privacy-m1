@@ -18,10 +18,19 @@
 <config>
     <modules>
         <Flurrybox_EnhancedPrivacy>
-            <version>0.0.3</version>
+            <version>0.0.4</version>
         </Flurrybox_EnhancedPrivacy>
     </modules>
     <frontend>
+        <translate>
+            <modules>
+                <flurrybox_enhancedprivacy>
+                    <files>
+                        <default>Flurrybox_EnhancedPrivacy.csv</default>
+                    </files>
+                </flurrybox_enhancedprivacy>
+            </modules>
+        </translate>
         <layout>
             <updates>
                 <flurrybox_enhancedprivacy module="Flurrybox_EnhancedPrivacy">

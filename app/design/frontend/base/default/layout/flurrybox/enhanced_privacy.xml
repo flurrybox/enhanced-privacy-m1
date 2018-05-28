@@ -43,6 +43,11 @@
         </reference>
     </enhancedprivacy_account_confirm>
     <default>
+        <reference name="head">
+            <action method="addCss">
+                <styleSheet>css/privacygdpr.css</styleSheet>
+            </action>
+        </reference>
         <block name="privacy.cookie.policy" type="core/template" before="-"
                template="flurrybox/cookie-policy.phtml"/>
         <reference name="after_body_start">
