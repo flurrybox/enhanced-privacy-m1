@@ -1,17 +1,19 @@
-Magento 1 extension for Privacy GDPR
+Magento 1 Enhanced Privacy extension for easier compliance with GDPR
 ------------- 
 
-**Enhanced Privacy** by **Flurrybox** is specially developed for the new European GDPR Privacy Rule for may 25, 2018
+Extension allows customers to delete, anonymize, or export their personal data.
 
-Features
+Usage and Features
 ------------- 
 
-Let your customers manage their Privacy Settings themself. 
-* Customers can **delete** their User Account.
-* Customers can **anonymize** their User Account.
-* Customers can **delete** their Account when they don't have orders, otherwise it can be **anonymized.**
-* Customers can export the User Data that is collected in Magento.
-* Popup for Cookie Policy with link to Privacy Policy Page
+Let your customers manage their Privacy Settings themself.
+* Configuration for this module is located in 'System > Configuration > Customer > Customer Options > Privacy (GDPR)'.
+* Account deletion, anonymization, and export can be done in 'My Account > Privacy Settings'.
+* Customers can export their data in .zip archive containing .csv files with personal, wishlist, quote, and address data.
+* Customer can delete or anonymize their account. Current password and reason is required. Account will be deleted within 1 hour (or as specified in configuration), in this time span its possible for customers to undo deletion.
+* If customer has made at least one order, they are ineligible to delete their account, instead it will be anonymized.
+* When a customer visits your store for the first time, a popup notification about cookie policy will be shown.
+* Supports Dutch and English locale
 
 Installation
 ------------- 
@@ -21,12 +23,9 @@ Installation
 * Flush Cache
 * Logout and Login into Magento
 * Go to System > Configuration > Customer > Customer Options > Privacy (GDPR)
-* Enable extension
+* Enable and configure extension as necessary
 
-Version 0.0.4
-------------- 
-* Added Stylesheet
-* Added locale path
-* Support Dutch and English
-* Added Privacy Policy Pagelink to the settings page
-* Updated translation
+
+Copyrights and License
+-------------
+Copyright (c) 2018 Flurrybox, Ltd. under GNU General Public License ("GPL") v3.0

@@ -54,6 +54,8 @@ class Flurrybox_EnhancedPrivacy_Model_Privacy_Export_CustomerAddress extends
 
         foreach ($customer->getAddresses() as $address)
         {
+            $street = implode(' ', $address->getStreet());
+
             $data[] = [
                 $address->getCity(),
                 $address->getCompany(),
@@ -66,7 +68,7 @@ class Flurrybox_EnhancedPrivacy_Model_Privacy_Export_CustomerAddress extends
                 $address->getSuffix(),
                 $address->getPostcode(),
                 $address->getRegion(),
-                $address->getStreet()[0] . ' ' . $address->getStreet()[1],
+                $street,
                 $address->getTelephone()
             ];
         }

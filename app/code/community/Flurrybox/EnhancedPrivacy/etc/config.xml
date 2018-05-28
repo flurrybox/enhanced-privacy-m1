@@ -101,7 +101,7 @@
             <enhancedprivacy>
                 <general_information>This website may store and process Personally Identifiable Information (PII). As per the General Data Protection Regulation (GDPR) you have access to receive the data we store about you and you can request your data to be removed. Please read our Terms &amp; Conditions and Privacy Policy to learn more.</general_information>
                 <delete_time>60</delete_time>
-                <delete_title>Account delete</delete_title>
+                <delete_title>Account deletion</delete_title>
                 <delete_button_text>Delete my account</delete_button_text>
                 <delete_success>You have requested your account to be deleted. It will be automatically deleted within 1 hour.</delete_success>
                 <delete_information>Be careful and think twice before deleting your account. This action is irreversible.</delete_information>

@@ -107,8 +107,7 @@
                         </delete_schema>
                         <delete_time translate="label">
                             <label>Account Delete Time (minutes)</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <frontend_type>text</frontend_type>
                             <sort_order>70</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -119,13 +118,12 @@
                             </depends>
                         </delete_time>
                         <delete_title translate="label">
-                            <label>Account Delete Time (minutes)</label>
+                            <label>Account Delete Title</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>80</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <comment>Time in which to process delete and anonymization (minimum is 1 minute)</comment>
                             <depends>
                                 <delete_enable>1</delete_enable>
                             </depends>

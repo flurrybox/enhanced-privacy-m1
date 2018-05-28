@@ -41,7 +41,7 @@ class Flurrybox_EnhancedPrivacy_Model_Cron
      */
     public function cleanup()
     {
-        if (!$this->helper->isModuleEnabled() || !$this->helper->isDeleteEnabled()) {
+        if (!$this->helper->isEnabled() || !$this->helper->isDeleteEnabled()) {
             return;
         }
 

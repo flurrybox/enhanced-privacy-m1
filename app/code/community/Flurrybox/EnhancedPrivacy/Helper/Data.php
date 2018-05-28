@@ -62,7 +62,7 @@ class Flurrybox_EnhancedPrivacy_Helper_Data extends Mage_Core_Helper_Abstract
      *
      * @return string|null
      */
-    public function isModuleEnabled()
+    public function isEnabled()
     {
         return Mage::getStoreConfig(self::CONF_GENERAL_ENABLE);
     }

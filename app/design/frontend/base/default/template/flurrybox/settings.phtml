@@ -48,7 +48,7 @@ $_helper = Mage::helper('flurrybox_enhancedprivacy'); ?>
 <form action="<?php echo $this->getDeleteUrl() ?>" method="post" id="form-validate">
     <div class="block block-dashboard-info">
         <div class="block-title">
-            <strong><?php echo "Account deletion"; ?></strong>
+            <strong><?php echo $_helper->getDeleteTitle(); ?></strong>
         </div>
         <div class="block-content">
             <?php if($this->isAccountToBeDeleted()): ?>
