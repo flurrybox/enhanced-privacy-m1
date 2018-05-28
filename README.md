@@ -3,6 +3,11 @@ Magento 1 Enhanced Privacy extension for easier compliance with GDPR
 
 Extension allows customers to delete, anonymize, or export their personal data.
 
+Prerequisites
+------------- 
+* Magento 1 CE or EE (tested with M1 CE 1.9.3.8)
+* PHP 5.4+
+
 Usage and Features
 ------------- 
 
