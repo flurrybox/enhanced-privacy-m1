@@ -18,7 +18,7 @@
 <layout>
     <customer_account>
         <reference name="customer_account_navigation">
-            <action method="addLink">
+            <action method="addLink" translate="label">
                 <name>enhanced_privacy</name>
                 <path>privacy/account</path>
                 <label>Privacy Settings</label>
