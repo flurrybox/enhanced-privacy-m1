@@ -1,0 +1,7 @@
+app/etc/modules/Flurrybox_EnhancedPrivacy.xml
+app/code/community/Flurrybox/EnhancedPrivacy/
+app/design/frontend/base/default/layout/flurrybox/enhanced_privacy.xml
+app/design/frontend/base/default/template/flurrybox/
+app/locale/en_US/Flurrybox_EnhancedPrivacy.csv
+app/locale/nl_NL/Flurrybox_EnhancedPrivacy.csv
+skin/frontend/base/default/css/privacygdpr.css
