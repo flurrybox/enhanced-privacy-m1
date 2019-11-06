@@ -53,7 +53,7 @@ class Flurrybox_EnhancedPrivacy_AccountController extends Mage_Core_Controller_F
 
             $this->getSession()->addSuccess("Data exported successfully.");
         } catch (Exception $exception) {
-            $this->getSession()->addException($exception,'Something went wrong, please try again later!');
+            $this->getSession()->addException($exception, $this->__('Something went wrong, please try again later!'));
             Mage::logException($exception);
         }
 
@@ -134,7 +134,7 @@ class Flurrybox_EnhancedPrivacy_AccountController extends Mage_Core_Controller_F
                 $this->getSession()->addSuccess($helper->getDeleteSuccess());
             }
         } catch (Exception $exception) {
-            $this->getSession()->addException($exception,'Something went wrong, please try again later!');
+            $this->getSession()->addException($exception, $this->__('Something went wrong, please try again later!'));
             Mage::logException($exception);
         }
 
@@ -158,9 +158,9 @@ class Flurrybox_EnhancedPrivacy_AccountController extends Mage_Core_Controller_F
             $cleanupItem = Mage::getModel('flurrybox_enhancedprivacy/cleanup')
                 ->load($customer->getId(),'customer_id');
             $cleanupItem->delete();
-            $this->getSession()->addSuccess("Account deletion has been canceled.");
+            $this->getSession()->addSuccess($this->__("Account deletion has been canceled."));
         } catch(Exception $exception) {
-            $this->getSession()->addException($exception,'Something went wrong, please try again later!');
+            $this->getSession()->addException($exception,$this->__('Something went wrong, please try again later!'));
             Mage::logException($exception);
         }
 
